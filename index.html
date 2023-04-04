@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="pt_BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marvel Endgame</title>
+
+    <style>
+
+        body{
+            font-family: Tahoma;
+            font-size: 15px;
+            line-height: 1.75;
+            margin: 0;
+            padding: 0;
+        }
+
+        #timeline{
+            display: flex;
+            background-color: #178adb;
+        }
+
+        #timeline:hover .item{
+            width: 23.3333%;
+        }
+
+        .item{
+            transform: translate3d(0,0,0);
+            position: relative;
+            width: 25%;
+            height: 100vh;
+            min-height: 600px;
+            color: white;
+            overflow: hidden;
+            transition: width 0.5s ease;
+        }
+
+        .item::before, .item::after{
+            transform: translate3d(0,0,0);
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+
+        }
+
+        .item::after{
+            background: rgba(21, 126, 209, 0.85);
+            opacity: 1;
+            transition: opacity 0.5s ease;
+        }
+
+        .item:hover::after{
+            background: transparent;
+        }
+
+        .item::before{
+            background: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 75%);
+            z-index: 1;
+            opacity: 0;
+            transform: translate3d(0,0,0) translateY(50%);
+            transition: opacity 0.5s ease, transform 0.5s ease;
+        }
+
+        .item:hover{
+            width: 30% !important;
+        }
+
+        .item:hover .content{
+            opacity: 1;
+            transform: translateY(0);
+            transition: all 0.75s ease 0.5s;
+        }
+
+        .item:hover .bg{
+            filter: grayscale(0)
+
+        }
+
+        .content{
+            transform: translate3d(0,0,0) translateY(25px);
+            position: relative;
+            z-index: 1;
+            text-align: center;
+            margin: 0 1.618em;
+            top: 55%;
+            opacity: 0;
+        }
+
+        .content h1{
+            font-family: tahoma;
+            text-transform: uppercase;
+            color: deepskyblue;
+            font-size: 1,44rem;
+            font-weight: normal;
+        }
+
+        .year{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translateX(-50%) translateY(-50%);
+            z-index: 1;
+            border-top: 1px solid white;
+            border-bottom: 1px solid white;
+
+        }
+
+        .year p{
+            font-family: tahoma;
+            font-size: 1.728rem;
+            line-height: 0;
+        }
+
+        .bg{
+            transform: translate3d(0,0,0);
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            background-size: cover;
+            background-position: center center;
+            transition: filter 0.5s ease;
+            filter: grayscale(100%);
+        }
+
+        p{
+            font-family: tahoma;
+            font-weight: normal;
+        }
+
+        .foto{
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            left: 0;
+        }
+
+    </style>
+
+
+</head>
+<body>
+    
+    <section id="timeline">
+        <div class="item">
+            <div class="bg" style="background-image: url(1.jpg)"> 
+                
+                <img class="foto" src="./src/imagens/iron.jpg" alt="Iron man">
+            
+            </div>
+
+            <div class="year">
+                <p>IRON MAN</p>
+            </div>
+            <div class="content">
+                <h1>História</h1>
+                <p>O Homem de Ferro foi um personagem dos quadrinhos publicados pela Marvel Comics. Sua verdadeira identidade é o empresário e bilionário Tony Stark, que usou armaduras de alta tecnologia no combate ao crime. Foi criado em 1963 pelo escritor Stan Lee, o roteirista Larry Lieber e os desenhistas Jack Kirby e Don Heck.</p>
+            </div>
+        </div>
+
+        <div class="item">
+            <div class="bg" style="background-image: url(2.jpg)">
+            
+            <img class="foto" src="./src/imagens/strange.jpg" alt="Doctor Strange">
+
+            </div>
+            <div class="year">
+                <p>STRANGE</p>
+            </div>
+            <div class="content">
+                <h1>História</h1>
+                <p>Criado pelo desenhista Steve Ditko e pelo roteirista Stan Lee, o personagem apareceu pela primeira vez em Strange Tales #110 (1 de julho de 1963). O Doutor Estranho serve como o Mago Supremo, o principal protetor da Terra contra ameaças mágicas e místicas.</p>
+            </div>
+        </div>
+
+        <div class="item">
+            <div class="bg" style="background-image: url(3.jpg)">
+            
+            <img class="foto" src="./src/imagens/spider.jpg" alt="Spider Man">
+
+            </div>
+            <div class="year">
+                <p>SPIDER MAN</p>
+            </div>
+            <div class="content">
+                <h1>História</h1>
+                <p>A história do Homem-Aranha começa quando o tímido Peter Parker, órfão de pai e mãe, que vive com os tios (Ben e May) em Forest Hills, no bairro nova-iorquino de Queens (EUA), visita um laboratório onde decorre uma experiência que revolucionará a sua vida, durante a qual uma aranha é atingida por uma potente radiação.</p>
+            </div>
+        </div>
+
+        <div class="item">
+            <div class="bg" style="background-image: url(3.jpg)">
+            
+            <img class="foto" src="./src/imagens/captain.jpg" alt="Captain American">
+
+            </div>
+            <div class="year">
+                <p>CAPTAIN</p>
+            </div>
+            <div class="content">
+                <h1>História</h1>
+                <p>Era 1941 e o criador de histórias em quadrinhos Joe Simon queria colocar um rosto no patriotismo “ianque”: assim criou o “Capitão América”, um jovem do Brooklin transformado em super-herói e que representa “tudo o que faz com que os Estados Unidos sejam o melhor lugar do mundo para se viver”.</p>
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>
